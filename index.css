@@ -1,11 +1,11 @@
 @charset "UTF-8";
+* { -webkit-text-size-adjust: 100%; }
+* {  -webkit-appearance: none; }
 
 html {
   font-size: 100%;
 }
 body {
-  -webkit-appearance: none;
-  -webkit-text-size-adjust: 100%;
   max-width: 100%;
   font-size: 0.9rem;
 }
@@ -156,7 +156,7 @@ li {
   }
   .item-display li {
     width: 40%;
-    margin: 0 20px 50px 20px;
+    margin: 0 10px 50px 10px;
   } 
   .item-display p {
     font-size: 1px;
