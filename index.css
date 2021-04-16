@@ -1,11 +1,11 @@
 @charset "UTF-8";
 
 html {
-  -webkit-appearance: none;
-  -webkit-text-size-adjust: 100%;
   font-size: 100%;
 }
 body {
+  -webkit-appearance: none;
+  -webkit-text-size-adjust: 100%;
   max-width: 100%;
   font-size: 0.9rem;
 }
