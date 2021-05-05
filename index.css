@@ -81,6 +81,7 @@ button a:hover {
   display: flex;
   justify-content: space-between;
   border-bottom: solid 1px #707070;
+  position: fixed;
   left: 0;
   right: 0;
   z-index: 10
@@ -360,6 +361,9 @@ button a:hover {
     width: 100%;
     margin: 0 auto;
     margin-bottom: 20px;
+  }
+  .shirt-image{
+    width: fit-content;
   }
   .shirt-item {
     display: flex;
