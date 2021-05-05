@@ -1,86 +1,294 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-site-verification" content="MZMqKdnnPFG1AMWxdhDbCaZzEGLzc24QYf7GTvWhG1k" />
   <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
   <link rel="stylesheet" href="index.css">
   <link rel="icon" href="./images/flog.jpg">
   <link rel="apple-touch-icon" sizes="180x180" href="./images/flog.jpg">
   <link rel="icon" type="image/png" href="./images/flog.jpg" sizes="192x192">
   <title>EYEFLOG</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="index.min.js"></script>
 </head>
 <body>
   <header id="header">
-    <h1><a href="index.html"><img src="./images/main-logo.jpg" alt="homepage-main-logo"></a></h1>
+    <h1 class="main-logo">
+      <a href="./index.html">
+        <img src="./images/main-logo.jpg" alt="main-logo">
+      </a>
+    </h1>
 
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#item">Item</a></li>
-      <li><a href="https://www.instagram.com/eye.frog_08/?hl=ja"><img src="./images/icon-instagram.png" alt="icon-instagram" class="instagram"></a></li>
-    </ul>
+    <nav class="navi">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="https://suzuri.jp/eyefrog">Item</a></li>
+        <li><a href="shirt.html">Shirt</a></li>
+        <li><a href="long-sleeve.html">Long</a></li>
+        <li><a href="accessories.html">Accessories</a></li>
+        <li><a href="https://suzuri.jp/eyefrog?sort=sales">Recommend</a></li>
+        <li><a href="https://suzuri.jp/eyefrog">New</a></li>
+        <li id="instagram-image"><a href="https://www.instagram.com/eye.frog_08/?hl=ja"><img src="./images/icon-instagram.png" alt="instagram"></a></li>
+      </ul>
+    </nav>
+
+    <div class="toggle_btn">
+      <span></span>
+      <span></span>
+    </div>
+
+    <div id="mask"></div>
   </header>
 
-  <main>
-    <div class="main-image"><img src="./images/main-image.png" alt="main-image"></div>
-    <section id="about" class="wrapper">
-      <h2 class="second-title" >About</h2>
-      <div class="about-display">
-       <img src="./images/eye-flog.jpg" alt="eye-flog">
-        <div class="about-text">
-           <h3>EYEFLOG</h3>
-           <p>カエルがモチーフのアパレルブランド。<br>
-           カエルは演技のいい生き物。<br>
-            身に付けたら運気が上るかも!?</p>
+
+  <main id="main" class="wrapper">
+    
+    <div id="video">
+      <video id="bg-video" src="./images/eyeflog-movie.mp4" autoplay muted playsinline></video>
+    </div>
+
+    <section id="recommend-item">
+      <div class="main-title">
+      <h2 class="sub-title">Recommend-Item</h2>
+      <p class="ja-title">人気商品</p>
+      </div>
+
+      <div class="no1-item">
+        <div class="no1-item-image">
+          <img src="./images/long-sleeve-image.jpg" alt="no1-item">
         </div>
+
+        <div class="no1-item-description">
+          <div class="no1-item-title">
+          <h3>long-sreve-tshirt</h3>
+          <ul>
+            <li><p>アイテム本体</p></li>
+            <li><p>・ロングスリーブTシャツ5.6オンス</p></li>
+            <br>
+            <li><p>素材・材質</p></li>
+            <li><p>・綿100% (ミックスグレーのみ：綿90%・ポリエスチル10%)</p></li>
+            <li class="item-money"><p>¥2,604 + Deribary</p></li>
+          </ul>
+          </div>
+
+          <table class="size-table">
+          <thead>
+            <tr>
+              <th class="size">Size</th>
+              <th class="s">S</th>
+              <th class="m">M</th>
+              <th class="l">L</th>
+              <th class="xl">XL</th>
+              <th class="xxl">XXL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>身丈</th>
+              <td>65</td>
+              <td>69</td>
+              <td>73</td>
+              <td>77</td>
+              <td>81</td>
+            </tr>
+            <tr>
+              <th>身幅</th>
+              <td>49</td>
+              <td>52</td>
+              <td>55</td>
+              <td>58</td>
+              <td>63</td>
+            </tr>
+            <tr>
+              <th>肩幅</th>
+              <td>42</td>
+              <td>44</td>
+              <td>48</td>
+              <td>52</td>
+              <td>56</td>
+            </tr>
+            <tr>
+              <th>袖丈</th>
+              <td>60</td>
+              <td>62</td>
+              <td>63</td>
+              <td>64</td>
+              <td>65</td>
+            </tr>
+          </tbody>
+         </table>
+         <button><a href="https://suzuri.jp/eyefrog/6588508/long-sleeve-t-shirt/s/white">この商品を見てみる</a></button>
+         </div>
       </div>
     </section>
 
-    <section id="item" class="wrapper">
-      <h2 class="second-title">Item</h2>
-      <ul class="item-display">
-        <li><a href="https://suzuri.jp/eyefrog/6600325/long-sleeve-t-shirt/s/white"><img src="./images/long-sleeve-tshirt-image.jpg" alt="images01">
-          <h3>ロングスリーブTシャツ</h3>
-        <p>¥2,904+delivery</p>
-        </a></li>
+    <section id="shirt">
+      <div class="box">
+        <img src="./images/pouplu_flog.jpg" alt="green_flog">
 
-        <li><a href="https://suzuri.jp/eyefrog/6588508/full-graphic-t-shirt/xl/white"><img src="./images/full-tshirt-white-image.jpg" alt="images01">
-          <h3>Tシャツ</h3>
-        <p>¥2,728+delivery</p>
-        </a></li>
+        <div class="title-box">
+         <div class="main-title">
+          <h2 class="sub-title">Shirt</h2>
+          <p class="ja-title">シャツ</p>
+         </div>
+        </div>
+      </div>
 
-        <li><a href="https://suzuri.jp/eyefrog/6589806/anorak/m/black"><img src="./images/anorak-black-image.jpg" alt="images01">
-          <h3>アノラック</h3>
-        <p>¥5,280+delivery</p>
-        </a></li>
+        <div class="shirt-item">
+          <div class="shirt-image">
+            <a href="https://suzuri.jp/eyefrog/6588508/big-t-shirt/l/white">
+              <img src="./images/shirt/shirt-white-image.jpg" alt="shirt1">
+              <p>ビックシルエットTシャツ<br>抗菌・消臭機能を持つ素材<br> "STAY-FRESH-COTTON" を使用しています。</p>
+              <p class="item-money">¥ 4,620 + delivery</p>
+            </a>
+          </div>
+          <div class="shirt-image">
+            <a href="https://suzuri.jp/eyefrog/6588508/t-shirt/s/white">
+              <img src="./images/shirt/tshirt-image.jpg" alt="shirt1">
+              <p>Tシャツ<br>90cm(kids)サイズには<br>左肩部分に樹脂製スナップボタンが付きます。</p>
+              <p class="item-money">¥ 2,728 + delivery</p>
+            </a>
+          </div>
+          <div class="shirt-image">
+            <a href="https://suzuri.jp/eyefrog/6588190/big-t-shirt/l/white">
+              <img src="./images/shirt/big-tshirt-white-image.jpg" alt="shirt1">
+              <p>ビックシルエットTシャツ<br>シンプルなTシャツに<br>" EYEFLOG "の専用ロゴを使用しています。</p>
+              <p class="item-money">¥ 4,620 + delivery</p>
+            </a>
+          </div>
+        </div>
 
-        <li><a href="https://suzuri.jp/eyefrog/6588190/soft-clear-smartphone-case/iphone-x/clear"><img src="./images/soft-clear-smartfon-image.jpg" alt="images01">
-          <h3>ソフトクリアスマホケース</h3>
-        <p>¥2,640+delivery</p>
-        </a></li>
+        <button><a href="">　　More　　</a></button>
+    </section>
 
-        <li><a href="https://suzuri.jp/eyefrog/6589806/coach-jacket/s/black"><img src="./images/jacket-black-image.jpg" alt="images01">
-          <h3>コーチジャケット</h3>
-        <p>¥5,280+delivery</p>
-        </a></li>
+    <section id="long-shirt">
+      <div class="box">
+        <img src="./images/yellow-flog.jpg" alt="green_flog">
 
-        <li><a href="https://suzuri.jp/eyefrog/6588190/big-long-sleeve-t-shirt/l/white"><img src="./images/long-sleeve-tshirt-white-image.jpg" alt="images01">
-          <h3>ビックシルエットロングスリーブTシャツ</h3>
-        <p>¥5,720+delivery</p>
-        </a></li>
-      </ul>
+        <div class="title-box">
+         <div class="main-title">
+          <h2 class="sub-title">Long-sleeve</h2>
+          <p class="ja-title">ロングスリーブ</p>
+         </div>
+        </div>
+      </div>
 
-      <p class="button"><a href="https://suzuri.jp/eyefrog">More</a></p>
+        <div class="shirt-item">
+          <div class="shirt-image">
+            <a href="https://suzuri.jp/eyefrog/6589806/anorak/m/black">
+              <img src="./images/long/anorak-black-image.jpg" alt="shirt1">
+              <p>アノラック<br>ナイロン100%のコットンライク<br>アノラックパーカーです。</p>
+              <p>¥ 5,280 + delivery</p>
+            </a>
+          </div>
+          <div class="shirt-image">
+            <a href="https://suzuri.jp/eyefrog/6589806/coach-jacket/s/black">
+              <img src="./images/long/jacket-black-image.jpg" alt="shirt1">
+              <p>コーチジャケット<br>[表地] ナイロン100%<br>[裏地] ポリエステル100%</p>
+              <p>¥ 5,280 + delivery</p>
+            </a>
+          </div>
+          <div class="shirt-image">
+            <a href="https://suzuri.jp/eyefrog/6588190/big-long-sleeve-t-shirt/l/white">
+              <img src="./images/long/big-long-tshirt-white-image.jpg" alt="shirt1">
+              <p>ビックシルエットロングスリーブTシャツ<br>綿を100%使用し抗菌・消臭機能を持つ素材<br> "STAY-FRESH-COTTON" を使用しています。</p>
+              <p>¥ 5,720 + delivery</p>
+            </a>
+          </div>
+        </div>
+
+        <button><a href="">　　More　　</a></button>
+    </section>
+
+    <section id="accessories">
+      <div class="box">
+        <img src="./images/blue_flog.jpg" alt="blue_flog">
+
+        <div class="title-box">
+         <div class="main-title">
+          <h2 class="sub-title">Accessories</h2>
+          <p class="ja-title">アクセサリー</p>
+         </div>
+        </div>
+      </div>
+
+        <div class="shirt-item">
+          <div class="shirt-image">
+            <a href="https://suzuri.jp/eyefrog/6588190/soft-clear-smartphone-case/iphone-x/clear">
+              <img src="./images/accessories/soft-clear-smartfon-image.jpg" alt="shirt1">
+              <p>ソフトクリアスマホケース<br>iPhone 8 / 7 / SE(第2世代)〜<br>iPhone 12 miniまで取り扱っております。</p>
+              <p>¥ 2,640 + delivery</p>
+            </a>
+          </div>
+            </div>
+
+        <button><a href="">　　More　　</a></button>
+    </section>
+
+    <section id="kids">
+      <div class="box">
+        <img src="./images/baby_frog.jpg" alt="baby_flog">
+
+        <div class="title-box">
+         <div class="main-title">
+          <h2 class="sub-title">Child</h2>
+          <p class="ja-title">キッズ</p>
+         </div>
+        </div>
+      </div>
+
+        <div class="shirt-item">
+          <div class="shirt-image">
+            <a href="https://suzuri.jp/eyefrog/6645364/baby-bib/m/white-black">
+              <img src="./images/baby-item01.jpg" alt="shirt1">
+              <p>ベイビービブ<br>素材に拘った綿100% 17sセミコーマ糸<br>樹脂製スナップボタンを使用しています。</p>
+              <p>¥ 2,204 + delivery</p>
+            </a>
+          </div>
+          <div class="shirt-image">
+            <a href="https://suzuri.jp/eyefrog/6645364/baby-rompers/80/white">
+              <img src="./images/baby-image02.jpg" alt="shirt1">
+              <p>ベイビーロンパース<br>赤ちゃんにストレスを感じさせない仕様になっています。</p>
+              <p>¥ 2,068 + delivery</p>
+            </a>
+          </div>
+        </div>
+
+        <button><a href="">　　More　　</a></button>
+    </section>
+
+    <section id="news">
+    <div class="box">
+      <img src="./images/green_flog.jpg" alt="green_flog">
+
+      <div class="title-box">
+       <div class="main-title">
+        <h2 class="sub-title">News</h2>
+        <p class="ja-title">ニュース</p>
+       </div>
+      </div>
+    </div>
+
+      <div class="news-text">
+        <dl>
+          <dt>2021.5.01</dt>
+          <dd><a href="https://www.instagram.com/p/COSAGxpDVRs/?utm_source=ig_web_copy_link">イメージ画像を更新いたしました。『ロングスリーブ - BLACK』</a></dd>
+          <dt>2021.4.20</dt>
+          <dd><a href="https://www.instagram.com/p/CN40dXVnfbD/?utm_source=ig_web_copy_link">新商品のイメージ画像を公開いたしました。</a></dd>
+          <dt>2021.4.17</dt>
+          <dd><a href="https://www.instagram.com/p/CNxUBU6H3LA/?utm_source=ig_web_copy_link">" EYEFLOG "のショートアニメーションを公開いたしました。</a></dd>
+          <dt>2021.4.11</dt>
+          <dd><a href="https://www.instagram.com/eye.frog_08/?hl=ja">新たなアパレルブランド" EYEFLOG "のInstagramが登場いたしました。</a></dd>
+        </dl>
+      </div>
     </section>
   </main>
-  <footer>
-    <div id="footer">
-    <h1><a href="index.html"><img src="./images/footer-imges.jpg" alt="footer-images"></a></h1>
-
-    <p>&copy; 2021 EYEFLOG</p>
-    </div>
+  <footer id="footer">
+      <h1><a href="index.html"><img src="./images/footer-imges.jpg" alt="footer-images"></a></h1>
+  
+      <p>&copy; 2021 EYEFLOG</p>
   </footer>
-</body>
+</body> 
 </html>
